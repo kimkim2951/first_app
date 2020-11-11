@@ -1,0 +1,8 @@
+%h1 トップページ
+= link_to '新規投稿', '/posts/new'
+- @posts.each do |post|
+  .post
+    .post-date
+      投稿日時：#{post.created_at}
+    .post-content
+      = post.content
